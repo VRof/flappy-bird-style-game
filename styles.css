@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#background {
+    height: 100vh;
+    /* For 100% screen height */
+    width: 100vw;
+    /* For 100% screen width */
+    background: rgb(30, 1, 48);
+    background: linear-gradient(0deg, rgba(30, 1, 48, 1) 0%, rgba(129, 0, 215, 1) 100%);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+.text::before {
+    content: "click mouse to jump";
+    font-family: Alegreya, serif;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(0, 200, 23);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    position: absolute;
+    top: 10%;
+    left: 43%;
+}
+
+.createdBy::before {
+    content: "created by Vitaly Rofman";
+    font-family: Alegreya, serif;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 123, 0);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+    position: absolute;
+    top: 90%;
+    left: 44%;
+}
+
+#game {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 400px;
+    height: 500px;
+    background-color: slategray;
+    border: 2px solid darkorange;
+    margin: auto;
+    overflow: hidden;
+}
+
+#block {
+    width: 50px;
+    height: 500px;
+    background-color: darkred;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+
+#hole {
+    width: 50px;
+    height: 150px;
+    background-color: slategray;
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+
+#character {
+    width: 35px;
+    height: 30px;
+    background: url(doge.png);
+    position: absolute;
+    top: 100px;
+}
+
+@keyframes block {
+    0% {
+        left: 400px
+    }
+
+    100% {
+        left: -50px
+    }
+}
