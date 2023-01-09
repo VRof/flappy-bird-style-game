@@ -3,13 +3,15 @@
 
 <head>
     <title>Flappy</title>
-    <link rel="icon" type="images/png" href="doge.png">
+    <link rel="icon" type="images/png" href="res/doge.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 
 <body>
     <div id="background">
+        <button id="muteBtn" onclick="mute()" type="button"></button>
+        <audio id="soundtrack" src="res/soundtrack.mp3" preload="auto"></audio>
         <p class="text"></p>
         <p class="createdBy"></p>
         <div id="game">
